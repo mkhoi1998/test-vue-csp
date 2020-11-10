@@ -1,5 +1,5 @@
 :80
 
 root * /dist
-header / Content-Security-Policy "default-src 'self'; script-src 'report-sample' 'self' 'unsafe-eval'; style-src 'report-sample' 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; report-uri https://5fa508a3ca69962525be3722.endpoint.csper.io/; worker-src 'none';"
+header / Content-Security-Policy "default-src 'self'; script-src 'report-sample' 'self' 'unsafe-eval'; style-src 'report-sample' 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; report-uri {$REPORT_ADDRESS}; report-to {$REPORT_ADDRESS}; worker-src 'none';"
 file_server

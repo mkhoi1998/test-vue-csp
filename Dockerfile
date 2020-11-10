@@ -6,6 +6,7 @@ COPY ./ .
 RUN npm run build
 
 FROM caddy:2.1.1-alpine as deploy-stage
+ENV REPORT_ADDRESS=https://localhost:2019
 WORKDIR /
 COPY --from=0 /build/dist dist
 COPY Caddyfile /etc/caddy/Caddyfile
